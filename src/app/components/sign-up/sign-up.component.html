@@ -1,0 +1,78 @@
+<div class="sign-up">
+  <div class="logo">
+    <img src="/assets/logo.svg" />
+  </div>
+  <div class="form-container">
+    <h1>Welcome to FedEx. Let’s get started.</h1>
+    <p>
+      Enter your contact information, or
+      <a href="https://www.fedex.com/secure-login/en-nl/">log in</a>, if you
+      already have a user ID and password.
+    </p>
+
+    <p *ngIf="hasError">
+      Something went wrong. Please try again or contact your local FedEx agent.
+    </p>
+
+    <p *ngIf="success">Your account is registered!</p>
+
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="First name"
+          formControlName="firstName"
+          required
+        />
+        <mat-error> This field is required </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Last name"
+          formControlName="lastName"
+          required
+        />
+        <mat-error> This field is required </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          type="email"
+          matInput
+          placeholder="Email"
+          formControlName="email"
+          required
+        />
+        <mat-error> Provide a valid email address </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          required
+        />
+        <mat-error>
+          Please provide a valid password with minimal 8 characters and at least
+          one uppercase character. The password should not contain the first and
+          last name.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          type="password"
+          placeholder="Repeat password"
+          formControlName="confirmPassword"
+          required
+        />
+        <mat-error> The password does not match the first password </mat-error>
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="secondary">
+        Sign me up!
+      </button>
+    </form>
+  </div>
+</div>

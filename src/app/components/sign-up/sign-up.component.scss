@@ -1,0 +1,26 @@
+$background: #f2f2f2;
+
+.sign-up {
+    padding: 64px 0;
+}
+
+.form-container {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    background: $background;
+}
+
+.mat-form-field {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.logo {
+    text-align: center;
+
+    img {
+        width: 100px;
+    }
+}

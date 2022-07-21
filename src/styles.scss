@@ -1,0 +1,14 @@
+$primary: #4d148c;
+$secondary: #ff6200;
+$white: #fff;
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $white;
+}
+
+.mat-secondary {
+  background: $secondary;
+  color: $white;
+}
